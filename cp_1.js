@@ -6,22 +6,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
   form.addEventListener("mouseover", (e) => {
     if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") {
-      e.target.nextElementSibling?.classList.add("show");
-      e.target.nextElementSibling?.style.setProperty("display", "block");
+      const tooltip = e.target.nextElementSibling;
+      if (tooltip?.classList.contains("tooltip")) {
+        tooltip.style.display = "block";
+      }
     }
   });
 
   form.addEventListener("mouseout", (e) => {
     if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") {
-      e.target.nextElementSibling?.classList.remove("show");
-      e.target.nextElementSibling?.style.setProperty("display", "none");
+      const tooltip = e.target.nextElementSibling;
+      if (tooltip?.classList.contains("tooltip")) {
+        tooltip.style.display = "none";
+      }
     }
   });
 
   document.getElementById("comments").addEventListener("input", (e) => {
     const length = e.target.value.length;
-    charCounter.textContent = `${length} / 250`;
-    if (length > 250) e.target.value = e.target.value.slice(0, 250);
+    charCounter.textContent = `${length} / 200`;
+    if (length > 200) {
+      e.target.value = e.target.value.slice(0, 200);
+    }
   });
 
   form.addEventListener("submit", (e) => {
@@ -42,6 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
     feedbackDisplay.appendChild(entry);
 
     form.reset();
-    charCounter.textContent = "0 / 250";
+    charCounter.textContent = "0 / 200";
   });
 });
