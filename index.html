@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Feedback - Bellavista</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>We Value Your Thoughts</h1>
+    <form id="feedback-form" class="form">
+      <div class="field-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="John Winston III" />
+        <span class="tooltip">Please enter your full name</span>
+      </div>
+
+      <div class="field-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="you@domain.com" />
+        <span class="tooltip">Use a valid email address</span>
+      </div>
+
+      <div class="field-group">
+        <label for="comments">Comments</label>
+        <textarea id="comments" rows="4" placeholder="Share your thoughts..."></textarea>
+        <span class="char-counter">0 / 250</span>
+        <span class="tooltip">Max 250 characters</span>
+      </div>
+
+      <button type="submit">Submit Feedback</button>
+    </form>
+
+    <div id="feedback-display" class="feedback-display"></div>
+  </main>
+
+  <script src="cp_1.js"></script>
+</body>
+</html>

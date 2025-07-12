@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Georgia', serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f7f4ed;
+  color: #3a3a3a;
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: #fffefb;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #2e2c2a;
+  text-align: center;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  background-color: #fdfdfd;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  background-color: #d6b37d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #b89664;
+}
+
+.field-group {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.tooltip {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #eee7d5;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  color: #6c5c4f;
+  border-radius: 5px;
+  display: none;
+  margin-top: 0.25rem;
+}
+
+.char-counter {
+  font-size: 0.8rem;
+  color: #888;
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
+}
+
+.feedback-display {
+  margin-top: 3rem;
+  border-top: 1px solid #e0ddd7;
+  padding-top: 2rem;
+}
+
+.feedback-display p {
+  background: #f0ece3;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
